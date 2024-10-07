@@ -1,17 +1,15 @@
-"use client"
+import React from "react"
+import UtilContextProvider from "./util"
+import ToastProvider from "./toastr"
 
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
-
-interface ToastProviderProps {
-  children: React.ReactNode;
-}
-
-export default function ToastProvider({children}: ToastProviderProps){
+const Providers: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <>
-      {children}
-      <ToastContainer/>
-    </>
+    <UtilContextProvider>
+      <ToastProvider>
+        {children}
+      </ToastProvider>
+    </UtilContextProvider>
   )
 }
+
+export default Providers

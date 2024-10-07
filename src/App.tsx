@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import Layout from './layout';
-import ProjectRouter from './routers';
+import Routers from './routers';
 import './App.css';
-
+import Providers from "../src/provider/index"
 function App() {
   return (
     <div className="App">
       <Layout>
-        <ProjectRouter />
+        <Providers >
+          <Routers />
+        </Providers>
       </Layout>
     </div>
   );

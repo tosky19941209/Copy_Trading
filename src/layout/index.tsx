@@ -7,7 +7,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <Header />
             <div>
                 {children}
-
             </div>
         </div>
     );
