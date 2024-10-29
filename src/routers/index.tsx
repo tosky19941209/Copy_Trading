@@ -1,21 +1,36 @@
 import {
-    Routes,
-    Route,
-    BrowserRouter
+    RouterProvider,
+    createBrowserRouter
 } from "react-router-dom"
-import SignUp from "./signup"
-import Signin from "./signin"
+import SignUp from "../pages/signup"
+import Signin from "../pages/signin"
+import Dashboard from "../pages/dashboard";
+import RequireAuth from "../components/isauth";
 const Routers = () => {
+
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: (
+                <RequireAuth>
+                    <Dashboard />
+                </RequireAuth>
+            )
+        },
+        {
+            path: "/login",
+            element: <Signin />,
+        },
+        {
+            path: "/signup",
+            element: <SignUp />,
+        },
+    ]);
+
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" >
-                    <Route path="login" element={<Signin />} />
-                    <Route path="signup" element={<SignUp />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <RouterProvider router={router} />
     )
 }
 
 export default Routers
+
