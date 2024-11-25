@@ -6,24 +6,43 @@ import SignUp from "../pages/signup"
 import Signin from "../pages/signin"
 import Dashboard from "../pages/dashboard";
 import RequireAuth from "../components/isauth";
+import HomePage from "../pages/homepage";
+import Layout from "../layout";
 const Routers = () => {
 
     const router = createBrowserRouter([
         {
             path: "/",
             element: (
-                <RequireAuth>
-                    <Dashboard />
-                </RequireAuth>
+                <Layout>
+                    <HomePage />
+                </Layout>
+            )
+        }
+        ,
+        {
+            path: "/dashboard",
+            element: (
+                <Layout>
+                    <RequireAuth>
+                        <Dashboard />
+                    </RequireAuth>
+                </Layout>
             )
         },
         {
-            path: "/login",
-            element: <Signin />,
+            path: "/signin",
+            element:
+                <Layout>
+                    <Signin />
+                </Layout>,
         },
         {
             path: "/signup",
-            element: <SignUp />,
+            element:
+                <Layout>
+                    <SignUp />
+                </Layout>,
         },
     ]);
 

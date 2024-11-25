@@ -7,8 +7,7 @@ const RequireAuth = ({ children }: any) => {
     const location = useLocation(); // Get current location
 
     if (user === "") {
-        // If not authenticated, redirect to login with the current location as state
-        return <Navigate to="/login" state={{ from: location }} replace />;
+        return <Navigate to="/" state={{ from: location }} replace />;
     }
 
     return children; // Render children if authenticated
