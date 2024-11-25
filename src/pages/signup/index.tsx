@@ -5,7 +5,7 @@ const SignUp = () => {
     const [password, setPassword] = useState<string>("")
     const [confirm, setConfirm] = useState<string>("")
     return (
-        <div className="w-[100%] flex items-center bg-red-200 h-10">
+        <div className="w-full flex items-center bg-red-200 h-10">
             {/* <div className="max-w-[500px] bg-red-100">
                 <p>
                     Sign up
