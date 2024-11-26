@@ -19,12 +19,15 @@ const Header = () => {
         "Sign In"
     ]
 
+    const handleLinkClick = (item: any) => {
+        if (item === '/')
+            setBodyColor("#6bbef1")
+        else setBodyColor("#cdd2d5")
+    };
 
     useEffect(() => {
         const pathname = window.location.pathname;
-        if (pathname === '/')
-            setBodyColor("#6bbef1")
-        else setBodyColor("#cdd2d5")
+        console.log("pasth ==>", pathname)
     }, [])
 
     return (
@@ -35,14 +38,14 @@ const Header = () => {
             <div className="flex gap-10">
                 {
                     router.map((item: string, idx: number) => (
-                        <a
-                            href={item}
+                        <Link
+                            to={item}
                             key={idx}
-                        >
+                            onClick={() => handleLinkClick(item)}>
                             <p className="text-black">
                                 {Content[idx]}
                             </p>
-                        </a>
+                        </Link>
                     ))
                 }
             </div>
