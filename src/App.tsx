@@ -4,7 +4,7 @@ import './App.css';
 import Providers from "../src/provider/index"
 function App() {
   return (
-    <div className="App min-h-screen">
+    <div className="App">
         <Providers >
           <Routers />
         </Providers>

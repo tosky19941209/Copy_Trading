@@ -3,7 +3,7 @@ import Header from '../components/header';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
-        <div className="layout flex flex-col justify-between">
+        <div className="layout flex flex-col justify-between font-['Gilroy']">
             <Header />
             <div>
                 {children}

@@ -8,12 +8,12 @@ import thirdCard from "../../assets/cards/3.png";
 
 const Cards = () => {
   return (
-    <>
+    <div className="md:w-[500px] w-[70vw]">
       <Swiper
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper"
+        className=""
       >
         <SwiperSlide>
           <img src={firCard} />
@@ -25,7 +25,7 @@ const Cards = () => {
           <img src={thirdCard} />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 
