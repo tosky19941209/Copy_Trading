@@ -11,6 +11,7 @@ const Follow = () => {
                     <img
                         src={item}
                         className="w-10"
+                        key={idx}
                     />
                 ))
             }

@@ -8,6 +8,7 @@ import Dashboard from "../pages/dashboard";
 import RequireAuth from "../components/isauth";
 import HomePage from "../pages/homepage";
 import Layout from "../layout";
+import Confirm from "../pages/confirm";
 const Routers = () => {
 
     const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const Routers = () => {
                     <SignUp />
                 </Layout>,
         },
+        {
+            path: "/confirm",
+            element: <Confirm />
+        }
     ]);
 
     return (

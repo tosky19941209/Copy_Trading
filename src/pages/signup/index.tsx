@@ -1,9 +1,12 @@
 import { useState } from "react"
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { showToast } from "../../helper"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { emailVerify } from "../../components/emailverification"
+
 
 const SignUp = () => {
+    const navigate = useNavigate()
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
     const [confirm, setConfirm] = useState<string>("")
@@ -18,8 +21,8 @@ const SignUp = () => {
             showToast("error", "password and confirm is not same.")
             return
         }
-
-
+        await emailVerify(email)
+        navigate("/confirm")
     }
     return (
         <div className="w-full flex items-center justify-center">
@@ -41,7 +44,7 @@ const SignUp = () => {
                 <div className="max-w-[420px] w-full relative">
                     <input
                         type={isPasswordVisible ? "text" : "password"}
-                                 className="max-w-[420px] w-full h-[50px] p-2 rounded-xl mt-5 mp-5 focus:outline-none bg-white text-black border border-[white]"
+                        className="max-w-[420px] w-full h-[50px] p-2 rounded-xl mt-5 mp-5 focus:outline-none bg-white text-black border border-[white]"
                         placeholder="Password"
                         value={password}
                         onChange={(e: any) => setPassword(e.target.value)}
@@ -53,7 +56,7 @@ const SignUp = () => {
 
                 <input
                     type={isPasswordVisible ? "text" : "password"}
-                                 className="max-w-[420px] w-full h-[50px] p-2 rounded-xl mt-5 mp-5 focus:outline-none bg-white text-black border border-[white]"
+                    className="max-w-[420px] w-full h-[50px] p-2 rounded-xl mt-5 mp-5 focus:outline-none bg-white text-black border border-[white]"
                     placeholder="Confirm"
                     value={confirm}
                     onChange={(e: any) => setConfirm(e.target.value)}
@@ -61,7 +64,7 @@ const SignUp = () => {
 
                 <input
                     type={"password"}
-                          className="max-w-[420px] w-full h-[50px] p-2 rounded-xl mt-5 mp-5 focus:outline-none bg-white text-black border border-[white]"
+                    className="max-w-[420px] w-full h-[50px] p-2 rounded-xl mt-5 mp-5 focus:outline-none bg-white text-black border border-[white]"
                     placeholder="Referral ID"
                     value={referralId}
                     onChange={(e: any) => setRerralId(e.target.value)}

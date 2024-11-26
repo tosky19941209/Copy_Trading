@@ -1,4 +1,3 @@
-import Layout from './layout';
 import Routers from './routers';
 import './App.css';
 import Providers from "../src/provider/index"

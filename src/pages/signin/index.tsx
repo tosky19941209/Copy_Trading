@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 const Login = () => {
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
-    const [referralId, setRerralId] = useState<string>("")
+    // const [referralId, setRerralId] = useState<string>("")
     const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
 
 
@@ -52,8 +52,8 @@ const Login = () => {
                             type="checkbox"
                             className="w-[25px] h-[25px]"
                             style={{
-                                accentColor:"white",
-                                
+                                accentColor: "white",
+
                             }}
                         />
                         <p className="text-[black]">

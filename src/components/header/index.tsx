@@ -1,12 +1,12 @@
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import Logo from "./logo"
-import Follow from "./follow"
-import { useEffect, useState } from "react"
+// import Follow from "./follow"
+import { useEffect } from "react"
 import setBodyColor from "../setbodycolor"
 
 const Header = () => {
 
-    const [domain, setDomain] = useState<string>("/")
+    // const [domain, setDomain] = useState<string>("/")
     const router = [
         "/",
         "/signup",
