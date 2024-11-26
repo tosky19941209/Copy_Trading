@@ -28,6 +28,7 @@ const Header = () => {
     useEffect(() => {
         const pathname = window.location.pathname;
         console.log("pasth ==>", pathname)
+        handleLinkClick(pathname)
     }, [])
 
     return (

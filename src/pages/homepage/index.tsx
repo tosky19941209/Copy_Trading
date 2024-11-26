@@ -28,7 +28,7 @@ const HomePage = () => {
                 </div>
 
             </div>
-            <div className="flex justify-center  xl:pt-28 ">
+            <div className="flex justify-center  xl:pt-28 xl:w-[50%] w-[100%]">
                 <Cards />
             </div>
         </div>
