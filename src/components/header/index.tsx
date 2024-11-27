@@ -32,12 +32,12 @@ const Header = () => {
     }, [])
 
     return (
-        <div className="flex justify-center md:justify-between items-center w-[100%] p-10">
-            <div className="md:block hidden">
+        <div className="flex justify-center md:justify-between items-center w-[100%] md:pl-32 lg:pl-60 pt-10">
+            <div className="">
                 <Logo />
             </div>
             <div className="flex gap-10">
-                {
+                {/* {
                     router.map((item: string, idx: number) => (
                         <Link
                             to={item}
@@ -48,7 +48,7 @@ const Header = () => {
                             </p>
                         </Link>
                     ))
-                }
+                } */}
             </div>
             {/* <div className="md:block hidden"> */}
             {/* <Follow /> */}

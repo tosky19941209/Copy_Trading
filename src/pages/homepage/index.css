@@ -3,3 +3,28 @@
     width: 1000px;
     height: 500px;
 }
+
+.viewButton {
+    background-color: rgb(18, 96, 144);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: 165px;
+    height: 54px;
+    border-radius: 16px;
+    box-shadow: rgba(255, 255, 255, 0.64) 0px 7px 6px -4px inset;
+    border: 2px solid rgb(114, 196, 207);
+}
+
+.right-side {
+    background: linear-gradient(-90deg, rgba(167, 189, 229, 0) 0%, rgb(255, 255, 255) 100%);
+}
+
+.left-side {
+    background: linear-gradient(90deg, rgba(167, 189, 229, 0) 0%, rgb(255, 255, 255) 100%);
+}
