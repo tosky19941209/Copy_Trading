@@ -7,7 +7,7 @@ import FsLogo from "../../assets/logo/fs.png";
 
 const Title = () => {
     return (
-        <div className={`flex xl:flex-row flex-col relative xl:pr-60 xl:pl-60 lg:mt-20   `}>
+        <div className={`flex xl:flex-row flex-col relative xl:pr-60 xl:pl-60   `}>
             <img
                 className="absolute top-0 left-0 w-[100vw] h-[100%]"
                 src={GradientImg} />
@@ -40,7 +40,7 @@ const Title = () => {
 const ScrollPart = () => {
     const logoList = [FsLogo, PionexLogo, KuCoinLogo]
     return (
-        <div>
+        <div className="flex flex-col gap-5 md:gap-10">
             <div className="flex justify-between items-center pl-10 pr-10 xl:pl-60 xl:pr-60 gap-5">
                 <div className="h-[2px] w-full left-side" />
                 <p className="text-[20px] lg:text-[30px] text-[white]">
@@ -49,7 +49,7 @@ const ScrollPart = () => {
                 <div className="h-[2px] w-full right-side" />
             </div>
 
-            <div className="flex gap-10 pl-10 pr-10 md:pl-52 md:pr-52 xl:pl-72 xl:pr-72 mt-10 justify-between">
+            <div className="flex gap-10 pl-10 pr-10 md:pl-52 md:pr-52 xl:pl-72 xl:pr-72 justify-between">
                 {
                     logoList.map((item: string, idx: number) => (
                         <img
@@ -61,7 +61,7 @@ const ScrollPart = () => {
                 }
             </div>
 
-            <div className="flex justify-center mt-10 mb-10 items-center pl-10 pr-10 xl:pl-60 xl:pr-60">
+            <div className="flex justify-center mb-10 items-center pl-10 pr-10 xl:pl-60 xl:pr-60">
                 <div className="h-[2px] w-[50%] left-side" />
                 <div className="h-[2px] w-[50%] right-side" />
             </div>
@@ -72,6 +72,7 @@ const HomePage = () => {
 
     return (
         <div>
+                       
             <Title />
             <ScrollPart />
         </div>
