@@ -1,7 +1,7 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/effect-cards";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
+// import 'swiper/css/effect-cards';
 import firCard from "../../assets/cards/1.png";
 import secCard from "../../assets/cards/2.png";
 import thirdCard from "../../assets/cards/3.png";
