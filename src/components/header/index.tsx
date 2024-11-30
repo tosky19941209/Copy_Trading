@@ -1,8 +1,7 @@
 // import { Link } from "react-router-dom"
 import Logo from "./logo"
 import Follow from "./follow"
-import { useEffect } from "react"
-import setBodyColor from "../setbodycolor"
+// import setBodyColor from "../setbodycolor"
 // import SideBarImg from "../../assets/setting.svg"
 const Header = () => {
 
@@ -20,17 +19,17 @@ const Header = () => {
     // ]
 
     // const [isSidebar, setSideBar] = useState<boolean>(false)
-    const handleLinkClick = (item: any) => {
-        if (item === '/')
-            setBodyColor("#6bbef1")
-        else setBodyColor("#cdd2d5")
-    };
+    // const handleLinkClick = (item: any) => {
+    //     // if (item === '/')
+    //     //     setBodyColor("#6bbef1")
+    //     // else setBodyColor("#cdd2d5")
+    // };
 
-    useEffect(() => {
-        const pathname = window.location.pathname;
-        console.log("pasth ==>", pathname)
-        handleLinkClick(pathname)
-    }, [])
+    // useEffect(() => {
+    //     const pathname = window.location.pathname;
+    //     console.log("pasth ==>", pathname)
+    //     handleLinkClick(pathname)
+    // }, [])
 
     return (
         <div className="relative">
